@@ -1,3 +1,4 @@
+# imovies-movie-ticket-booking
 # 🎬 IMovies — Movie Ticket Booking Made Simple
 
 [![Node.js Version](https://img.shields.io/badge/Node.js-v24.22.1-green.svg)](https://nodejs.org/)
