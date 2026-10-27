@@ -1,0 +1,160 @@
+@charset "UTF-8";
+
+/* Custom modern styling for IMovies */
+:root {
+  --primary: #e11d48;
+  --primary-hover: #f43f5e;
+  --accent: #fbbf24;
+  --bg-dark: #090d16;
+  --card-bg: rgba(22, 28, 45, 0.7);
+  --border-glow: rgba(225, 29, 72, 0.25);
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: #f1f5f9;
+  min-height: 100vh;
+  overflow-x: hidden;
+  line-height: 1.5;
+}
+
+/* Glassmorphism containers */
+.glass-panel {
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-card {
+  background: rgba(30, 41, 59, 0.5);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: all 0.25s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(225, 29, 72, 0.35);
+  box-shadow: 0 12px 30px -10px rgba(225, 29, 72, 0.25);
+}
+
+/* Cinema Screen Curved Projection Effect */
+.screen-container {
+  perspective: 600px;
+}
+
+.cinema-screen {
+  height: 24px;
+  background: linear-gradient(to bottom, rgba(56, 189, 248, 0.8), rgba(225, 29, 72, 0.2));
+  border-radius: 50% 50% 0 0;
+  box-shadow: 0 8px 30px rgba(56, 189, 248, 0.4);
+  transform: rotateX(-15deg);
+}
+
+/* Seat styling */
+.seat-btn {
+  width: 32px;
+  height: 30px;
+  border-radius: 6px 6px 3px 3px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  user-select: none;
+}
+
+.seat-available-standard {
+  background: #1e293b;
+  border: 1px solid #475569;
+  color: #94a3b8;
+}
+
+.seat-available-standard:hover {
+  background: #334155;
+  border-color: #cbd5e1;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.seat-available-premium {
+  background: #1e1b4b;
+  border: 1px solid #6366f1;
+  color: #c7d2fe;
+}
+
+.seat-available-premium:hover {
+  background: #312e81;
+  border-color: #818cf8;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.seat-available-vip {
+  background: #3b2803;
+  border: 1px solid #d97706;
+  color: #fde68a;
+}
+
+.seat-available-vip:hover {
+  background: #593d04;
+  border-color: #fbbf24;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.seat-selected {
+  background: #e11d48 !important;
+  border-color: #f43f5e !important;
+  color: #ffffff !important;
+  transform: scale(1.12);
+  box-shadow: 0 0 12px rgba(225, 29, 72, 0.8);
+}
+
+.seat-booked {
+  background: #0f172a !important;
+  border-color: #1e293b !important;
+  color: #334155 !important;
+  cursor: not-allowed !important;
+  opacity: 0.4;
+}
+
+.seat-locked {
+  background: #78350f !important;
+  border-color: #b45309 !important;
+  color: #fcd34d !important;
+  cursor: not-allowed !important;
+  animation: pulse 1.5s infinite;
+}
+
+/* Animations */
+@keyframes pulse {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 0.4; }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #090d16;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
